@@ -10,6 +10,7 @@ jobs:
       - name: Prepare maven
         uses: actions/setup-java@v5
         with:
+          java-version: 26
           distribution: 26
       - name: Run maven
         run: mvn clean deploy
