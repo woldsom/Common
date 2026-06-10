@@ -12,5 +12,6 @@ jobs:
         with:
           java-version: 26
           distribution: temurin
+      - uses: s4u/maven-settings-action@v4.0.0
       - name: Run maven
-        run: mvn clean deploy -DaltDeploymentRepository=snapshotRepository::default::https://maven.pkg.github.com/woldsom/Common
+        run: mvn clean deploy
