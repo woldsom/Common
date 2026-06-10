@@ -11,6 +11,6 @@ jobs:
         uses: actions/setup-java@v5
         with:
           java-version: 26
-          distribution: 26
+          distribution: temurin
       - name: Run maven
         run: mvn clean deploy
