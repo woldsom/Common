@@ -1,0 +1,15 @@
+name: deploy library
+on:
+  push:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Prepare maven
+        uses: actions/setup-java@v5
+        with:
+          distribution: 26
+      - name: Run maven
+        run: mvn clean deploy
