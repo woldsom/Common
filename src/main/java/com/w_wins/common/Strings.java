@@ -63,4 +63,8 @@ public final class Strings {
     private static Stream<String> split(final String string, final Pattern pattern) {
         return Arrays.stream(pattern.split(string));
     }
+
+    public static String removeCharacter(final String original, final int index) {
+        return original.substring(0, index) + original.substring(index + 1);
+    }
 }
